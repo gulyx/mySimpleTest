@@ -24,4 +24,7 @@ jobs:
       - name: Compile the image
         run: cd ${{github.workspace}} |
              mvn clean compile
+      - name: Test the image
+        run: cd ${{github.workspace}} |
+             mvn clean test
       - run: echo "This job's status is ${{job.status}}."
