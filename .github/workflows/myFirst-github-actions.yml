@@ -20,6 +20,7 @@ jobs:
         with: 
               java-version: '11'
               distribution: 'adopt'
+              cache: maven
       - name: Compile the image
         run: cd ${{github.workspace}} |
              mvn clean compile
