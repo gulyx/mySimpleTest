@@ -15,4 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{github.workspace}}
+      - name: Run compile the image
+        run: cd ${{github.workspace}} 
+             mvn clean compile
       - run: echo "This job's status is ${{job.status}}."
